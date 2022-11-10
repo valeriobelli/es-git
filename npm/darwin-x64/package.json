@@ -1,5 +1,5 @@
 {
-  "name": "esgit-darwin-x64",
+  "name": "@tossteam/esgit-darwin-x64",
   "version": "0.0.0",
   "os": [
     "darwin"

@@ -1,5 +1,5 @@
 {
-  "name": "esgit-linux-x64-musl",
+  "name": "@tossteam/esgit-linux-x64-musl",
   "version": "0.0.0",
   "os": [
     "linux"
