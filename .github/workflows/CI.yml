@@ -36,13 +36,13 @@ jobs:
             docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-debian
             build: |-
               set -e &&
-              apt update && apt install -y libssl-dev openssl &&
+              apt update && apt install -y libssl-dev openssl zlib1g-dev &&
               yarn build --target x86_64-unknown-linux-gnu &&
               strip *.node
           - host: ubuntu-latest
             target: x86_64-unknown-linux-musl
             docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-alpine
-            build: set -e && apk upgrade --update-cache --available && apk add openssl libressl-dev && yarn build && strip *.node
+            build: set -e && apk upgrade --update-cache --available && apk add openssl-dev && yarn build && strip *.node
           - host: macos-latest
             target: aarch64-apple-darwin
             build: |
