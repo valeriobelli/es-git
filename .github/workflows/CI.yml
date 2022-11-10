@@ -37,6 +37,8 @@ jobs:
             build: |-
               set -e &&
               dpkg -L zlib1g-dev &&
+              ls -al /usr/lib &&
+              ls -al /lib &&
               apt update && 
               apt install -y pkg-config build-essential libssl-dev librust-openssl-dev openssl libz-dev zlib1g-dev lib32z1-dev &&
               yarn build --target x86_64-unknown-linux-gnu &&
