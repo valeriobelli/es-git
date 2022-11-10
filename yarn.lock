@@ -75,9 +75,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tossteam/esgit-root@workspace:.":
+"@tossteam/esgit@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@tossteam/esgit-root@workspace:."
+  resolution: "@tossteam/esgit@workspace:."
   dependencies:
     "@napi-rs/cli": ^2.12.0
     ava: ^4.3.3
