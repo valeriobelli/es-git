@@ -36,7 +36,7 @@ jobs:
             docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-debian
             build: |-
               set -e &&
-              apt update && apt install -y libssl-dev librust-openssl-dev openssl zlib1g-dev &&
+              apt update && apt install -y pkg-config build-essential libssl-dev librust-openssl-dev  openssl zlib1g-dev &&
               yarn build --target x86_64-unknown-linux-gnu &&
               strip *.node
           - host: ubuntu-latest
