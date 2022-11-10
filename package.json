@@ -30,7 +30,8 @@
     "build:debug": "napi build --platform",
     "prepublishOnly": "napi prepublish -t npm",
     "version": "napi version",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "test": "echo \"Will be tested\""
   },
   "packageManager": "yarn@3.2.4"
 }
