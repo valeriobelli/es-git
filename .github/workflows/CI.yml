@@ -38,7 +38,7 @@ jobs:
               set -e &&
               apt update && 
               apt install -y pkg-config build-essential libssl-dev librust-openssl-dev openssl libz-dev zlib1g-dev lib32z1-dev &&
-              RUSTFLAGS='-C link-args=-L/usr/lib/x86_64-linux-gnu/' yarn build --target x86_64-unknown-linux-gnu &&
+              RUSTFLAGS='-C link-args=-L/usr/lib/x86_64-linux-gnu/' yarn build --target x86_64-unknown-linux-gnu --zig --zig-abi-suffix 2.17 &&
               strip *.node
           - host: ubuntu-latest
             target: x86_64-unknown-linux-musl
