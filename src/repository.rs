@@ -1,5 +1,7 @@
+use std::ffi::CString;
+
 use anyhow::Error;
-use git2::{Index, Repository};
+use git2::{Index, Repository, IndexEntry};
 
 use crate::context::GitContext;
 
@@ -38,6 +40,52 @@ pub fn has_merge_conflicts(
   let tree = get_merge_tree(ref1, ref2, context)?;
 
   Ok(tree.has_conflicts())
+}
+
+#[napi(object)]
+pub struct Conflict {
+  pub ancestor: Option<String>,
+  pub our: Option<String>,
+  pub their: Option<String>,
+}
+
+#[napi]
+pub fn get_conflicting_files(
+  ref1: String,
+  ref2: String,
+  context: GitContext
+) -> anyhow::Result<Vec<Conflict>> {
+  let tree = get_merge_tree(ref1, ref2, context)?;
+  let conflicts_list = tree.conflicts();
+
+  let mut files = vec![];
+
+  for conflicts in conflicts_list {
+    for conflict in conflicts {
+      let conflict = conflict?;
+
+      let ancestor = conflict.ancestor.and_then(parse_index_entry);
+      let our = conflict.our.and_then(parse_index_entry);
+      let their = conflict.their.and_then(parse_index_entry);
+
+      let conflict = Conflict {
+        ancestor,
+        our,
+        their,
+      };
+
+      files.push(conflict);
+    }
+  }
+
+  Ok(files)
+}
+
+fn parse_index_entry(entry: IndexEntry) -> Option<String> {
+  let str = CString::new(&entry.path[..]).ok()?;
+  let str = str.to_str().ok()?;
+
+  Some(str.to_owned())
 }
 
 pub fn get_merge_tree(ref1: String, ref2: String, context: GitContext) -> anyhow::Result<Index> {
