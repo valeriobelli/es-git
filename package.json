@@ -32,8 +32,8 @@
   },
   "scripts": {
     "prepublishOnly": "napi prepublish -t npm",
-    "build": "napi build --platform --release",
-    "build:debug": "napi build --platform",
+    "build": "napi build --platform --release --dts=es-git.d.ts",
+    "build:debug": "napi build --platform --dts=es-git.d.ts",
     "check": "biome check",
     "check:fix": "biome check --write --unsafe"
   },

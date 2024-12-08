@@ -310,17 +310,17 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { createBranch, getBranch, deleteBranch, removeRef, getRemoteUrl, getSha, getHeadSha, getGitRootPath, hasMergeConflicts, getConflictingFiles, createTag, deleteTag } = nativeBinding
+const { Direction, CredentialType, FetchPrune, AutotagOption, RemoteRedirect, RepositoryState, RepositoryOpenFlags, Repository, initRepository, openRepository, discoverRepository, cloneRepository } = nativeBinding
 
-module.exports.createBranch = createBranch
-module.exports.getBranch = getBranch
-module.exports.deleteBranch = deleteBranch
-module.exports.removeRef = removeRef
-module.exports.getRemoteUrl = getRemoteUrl
-module.exports.getSha = getSha
-module.exports.getHeadSha = getHeadSha
-module.exports.getGitRootPath = getGitRootPath
-module.exports.hasMergeConflicts = hasMergeConflicts
-module.exports.getConflictingFiles = getConflictingFiles
-module.exports.createTag = createTag
-module.exports.deleteTag = deleteTag
+module.exports.Direction = Direction
+module.exports.CredentialType = CredentialType
+module.exports.FetchPrune = FetchPrune
+module.exports.AutotagOption = AutotagOption
+module.exports.RemoteRedirect = RemoteRedirect
+module.exports.RepositoryState = RepositoryState
+module.exports.RepositoryOpenFlags = RepositoryOpenFlags
+module.exports.Repository = Repository
+module.exports.initRepository = initRepository
+module.exports.openRepository = openRepository
+module.exports.discoverRepository = discoverRepository
+module.exports.cloneRepository = cloneRepository

@@ -201,3 +201,6 @@ Cargo.lock
 
 # npm folders
 npm
+
+# Generated
+es-git.d.ts
