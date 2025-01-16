@@ -1,8 +1,12 @@
 #![deny(clippy::all)]
 
+pub mod commit;
 mod error;
+pub mod object;
 pub mod remote;
 pub mod repository;
+pub mod revparse;
+pub mod signature;
 pub(crate) mod util;
 
 pub use error::Error;
