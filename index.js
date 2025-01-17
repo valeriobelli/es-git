@@ -310,7 +310,7 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { Commit, ObjectType, GitObject, ReferenceType, Reference, isReferenceNameValid, ReferenceFormat, normalizeReferenceName, Direction, CredentialType, FetchPrune, AutotagOption, RemoteRedirect, Remote, RepositoryState, RepositoryOpenFlags, Repository, initRepository, openRepository, discoverRepository, cloneRepository, RevparseMode, revparseModeContains, createSignature } = nativeBinding
+const { Commit, ObjectType, GitObject, ReferenceType, Reference, isReferenceNameValid, ReferenceFormat, normalizeReferenceName, Direction, CredentialType, FetchPrune, AutotagOption, RemoteRedirect, Remote, RepositoryState, RepositoryOpenFlags, Repository, initRepository, openRepository, discoverRepository, cloneRepository, RevparseMode, revparseModeContains, RevwalkSort, Revwalk, createSignature } = nativeBinding
 
 module.exports.Commit = Commit
 module.exports.ObjectType = ObjectType
@@ -335,4 +335,6 @@ module.exports.discoverRepository = discoverRepository
 module.exports.cloneRepository = cloneRepository
 module.exports.RevparseMode = RevparseMode
 module.exports.revparseModeContains = revparseModeContains
+module.exports.RevwalkSort = RevwalkSort
+module.exports.Revwalk = Revwalk
 module.exports.createSignature = createSignature

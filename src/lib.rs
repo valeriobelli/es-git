@@ -7,6 +7,7 @@ pub mod reference;
 pub mod remote;
 pub mod repository;
 pub mod revparse;
+pub mod revwalk;
 pub mod signature;
 pub(crate) mod util;
 
