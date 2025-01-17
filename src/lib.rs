@@ -3,6 +3,7 @@
 pub mod commit;
 mod error;
 pub mod object;
+pub mod reference;
 pub mod remote;
 pub mod repository;
 pub mod revparse;
