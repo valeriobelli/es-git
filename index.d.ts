@@ -21,7 +21,7 @@ export interface CommitOptions {
   committer?: SignaturePayload
   parents?: Array<string>
 }
-export const enum DiffFlags {
+export enum DiffFlags {
   /** File(s) treated as binary data. */
   Binary = 1,
   /** File(s) treated as text data. */
@@ -299,7 +299,7 @@ export interface IndexUpdateAllOptions {
   onMatch?: (args: IndexOnMatchCallbackArgs) => number
 }
 /** An enumeration all possible kinds objects may have. */
-export const enum ObjectType {
+export enum ObjectType {
   /** Any kind of git object */
   Any = 0,
   /** An object which corresponds to a git commit */
@@ -360,7 +360,7 @@ export type ReferenceType = /** A reference which points at an object id. */
  */
 export declare function isValidReferenceName(refname: string): boolean
 /** Options for normalize reference name. */
-export const enum ReferenceFormat {
+export enum ReferenceFormat {
   /** No particular normalization. */
   Normal = 0,
   /**
@@ -605,7 +605,7 @@ export interface PruneOptions {
 /** A listing of the possible states that a repository can be in. */
 export type RepositoryState = 'Clean' | 'Merge' | 'Revert' | 'RevertSequence' | 'CherryPick' | 'CherryPickSequence' | 'Bisect' | 'Rebase' | 'RebaseInteractive' | 'RebaseMerge' | 'ApplyMailbox' | 'ApplyMailboxOrRebase';
 /** Mode options for `RepositoryInitOptions`. */
-export const enum RepositoryInitMode {
+export enum RepositoryInitMode {
   /** Use permissions configured by umask (default) */
   SharedUnmask = 0,
   /**
@@ -730,7 +730,7 @@ export interface RepositoryOpenOptions {
   ceilingDirs?: Array<string>
 }
 /** Flags for opening repository. */
-export const enum RepositoryOpenFlags {
+export enum RepositoryOpenFlags {
   /** Only open the specified path; don't walk upward searching. */
   NoSearch = 1,
   /** Search across filesystem boundaries. */
@@ -783,7 +783,7 @@ export declare function discoverRepository(path: string, signal?: AbortSignal | 
  */
 export declare function cloneRepository(url: string, path: string, options?: RepositoryCloneOptions | undefined | null, signal?: AbortSignal | undefined | null): Promise<Repository>
 /** Flags for the revparse. */
-export const enum RevparseMode {
+export enum RevparseMode {
   /** The spec targeted a single object */
   Single = 1,
   /** The spec targeted a range of commits */
@@ -803,7 +803,7 @@ export interface Revspec {
   mode: number
 }
 /** Orderings that may be specified for Revwalk iteration. */
-export const enum RevwalkSort {
+export enum RevwalkSort {
   /**
    * Sort the repository contents in no particular ordering.
    *
