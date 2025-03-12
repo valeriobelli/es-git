@@ -23,8 +23,14 @@ console.log(head); // "refs/heads/main"
 
 ## 문서
 
-- [사용법](https://es-git.slash.page/ko/usage/open)
-- [레퍼런스](https://es-git.slash.page/ko/reference/globals)
+- [사용법](https://es-git.slash.page/ko/usage/repository.html)
+- [레퍼런스](https://es-git.slash.page/ko/reference/globals.html)
+
+## 기여하기
+
+커뮤니티에 있는 모든 분들에게 기여를 환영해요. 아래에 작성되어 있는 기여 가이드를 확인하세요.
+
+[CONTRIBUTING](https://github.com/toss/es-git/blob/main/.github/CONTRIBUTING.md)
 
 ## 라이센스
 
