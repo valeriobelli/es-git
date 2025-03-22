@@ -2430,6 +2430,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"benchmarks@workspace:benchmarks":
+  version: 0.0.0-use.local
+  resolution: "benchmarks@workspace:benchmarks"
+  dependencies:
+    es-git: "workspace:^"
+    nodegit: "link:./nodegit"
+    vitest: "npm:^3.0.5"
+  languageName: unknown
+  linkType: soft
+
 "binary-extensions@npm:^2.0.0":
   version: 2.3.0
   resolution: "binary-extensions@npm:2.3.0"
@@ -2984,7 +2994,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-git@workspace:.":
+"es-git@workspace:., es-git@workspace:^":
   version: 0.0.0-use.local
   resolution: "es-git@workspace:."
   dependencies:
@@ -4468,6 +4478,12 @@ __metadata:
   checksum: 10c0/52a0dbd25ccf545892670d1551690fe0facb6a471e15f2cfa1b20142a5b255b3aa254af5f59d6ecb69c2bec7390bc643c43aa63b13bf5e64b6075952e716b1aa
   languageName: node
   linkType: hard
+
+"nodegit@link:./nodegit::locator=benchmarks%40workspace%3Abenchmarks":
+  version: 0.0.0-use.local
+  resolution: "nodegit@link:./nodegit::locator=benchmarks%40workspace%3Abenchmarks"
+  languageName: node
+  linkType: soft
 
 "nopt@npm:^6.0.0":
   version: 6.0.0

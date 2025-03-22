@@ -1,0 +1,14 @@
+{
+  "name": "benchmarks",
+  "private": true,
+  "scripts": {
+    "bench": "vitest bench --run"
+  },
+  "dependencies": {
+    "es-git": "workspace:^",
+    "nodegit": "link:./nodegit"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.5"
+  }
+}
