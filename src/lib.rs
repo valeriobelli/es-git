@@ -2,6 +2,7 @@
 
 pub mod blob;
 pub mod commit;
+pub mod config;
 pub mod diff;
 mod error;
 pub mod index;
