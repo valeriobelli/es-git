@@ -61,7 +61,14 @@ export const shared = defineConfig({
       'meta',
       {
         property: 'og:image',
-        content: '/og.png',
+        content: 'https://es-git.slash.page/og.png',
+      },
+    ],
+    [
+      'meta',
+      {
+        name: 'twitter:image',
+        content: 'https://es-git.slash.page/og.png',
       },
     ],
     [
