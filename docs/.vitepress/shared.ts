@@ -67,13 +67,6 @@ export const shared = defineConfig({
     [
       'meta',
       {
-        name: 'twitter:image',
-        content: '/og.png',
-      },
-    ],
-    [
-      'meta',
-      {
         name: 'twitter:card',
         content: 'summary',
       },
